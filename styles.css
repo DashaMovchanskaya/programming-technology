@@ -1,4 +1,4 @@
-/* Базовые настройки */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +14,6 @@ body {
     min-height: 100vh;
 }
 
-/* Шапка */
 .main-header {
     background-color: #2c3e50;
     color: white;
@@ -55,7 +54,6 @@ body {
     margin-left: 15px;
 }
 
-/* Контент */
 .container {
     flex: 1;
     padding: 30px;
@@ -75,7 +73,6 @@ h1 {
     color: #2c3e50;
 }
 
-/* Кнопки */
 .btn-primary {
     background-color: #3498db;
     color: white;
@@ -100,7 +97,6 @@ h1 {
 .btn-edit { background-color: #f1c40f; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
 .btn-delete { background-color: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
 
-/* Фильтры */
 .filters {
     display: flex;
     gap: 15px;
@@ -113,7 +109,6 @@ h1 {
     border-radius: 4px;
 }
 
-/* Карточки */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -136,7 +131,6 @@ h1 {
     gap: 10px;
 }
 
-/* Пагинация */
 .pagination {
     display: flex;
     justify-content: center;
@@ -154,7 +148,6 @@ h1 {
     cursor: pointer;
 }
 
-/* Модальное окно */
 .modal-screen {
     display: flex;
     justify-content: center;
@@ -191,7 +184,6 @@ h1 {
     margin-top: 20px;
 }
 
-/* Экран ошибки */
 .error-box {
     background: #fde8e8;
     border-left: 5px solid #e74c3c;
@@ -203,7 +195,6 @@ h1 {
 .error-box h2 { color: #e74c3c; margin-bottom: 15px; }
 .error-box p { margin-bottom: 20px; }
 
-/* Таблица админа */
 .admin-table {
     width: 100%;
     border-collapse: collapse;
@@ -219,7 +210,6 @@ h1 {
 
 .admin-table th { background-color: #ecf0f1; font-weight: bold; }
 
-/* Подвал */
 .main-footer {
     background-color: #2c3e50;
     color: #bdc3c7;
@@ -230,33 +220,23 @@ h1 {
 
 .main-footer p { margin: 5px 0; }
 
-
-/* ========================================= */
-/* --- ЛОГИКА ПЕРЕКЛЮЧЕНИЯ ЭКРАНОВ (SPA) --- */
-/* ========================================= */
-
-/* По умолчанию все экраны скрыты */
 .screen {
     display: none; 
     margin-top: 20px;
 }
 
-/* Показываем экран, на который кликнули (через :target) */
 .screen:target {
     display: block;
 }
 
-/* Главный экран "Мои пожелания" показываем по умолчанию при загрузке */
 #screen-prefs {
     display: block;
 }
 
-/* Прячем главный экран, если мы перешли на ЛЮБОЙ ДРУГОЙ экран (не #screen-prefs) */
 body:has(.screen:target:not(#screen-prefs)) #screen-prefs {
     display: none;
 }
 
-/* Центрируем модалку авторизации */
 #screen-auth .modal {
     width: 350px;
     margin-top: 50px;
